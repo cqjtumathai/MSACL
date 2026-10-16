@@ -1,6 +1,6 @@
-MSACL: Multi-domain Latent Semantic Mining with Augmentation-free Contrastive Learning for Multimodal Recommendation
+#MSACL: Multi-domain Latent Semantic Mining with Augmentation-free Contrastive Learning for Multimodal Recommendation
 
-Requirements
+##Requirements
 ```text
 python = 3.8.20
 pytorch = 2.1.2
@@ -16,7 +16,7 @@ matplotlib = 3.7.1
 Pillow = 10.0.0
 ```
 
-Datasets
+##Datasets
 We evaluate MSACL on three public multimodal recommendation datasets: Baby, Sports, and Clothing.
 
 The processed datasets and pre-extracted multimodal features can be downloaded from:
@@ -43,7 +43,7 @@ Following previous multimodal recommendation studies, we use publicly released p
 - Visual feature dimension: 4096
 - Textual feature dimension: 384
 
-Training
+##Training
 The recommended hyperparameters for Baby, Sports, and Clothing are provided in three dataset-specific files:
 
 - `src/configs/model/MSACL-baby-dataset.yaml`
@@ -52,19 +52,19 @@ The recommended hyperparameters for Baby, Sports, and Clothing are provided in t
 
 The configuration file is loaded automatically according to the dataset specified by `-d`, so no manual editing is required. Please run the following commands from the `src/` directory:
 
-**Baby**
+###**Baby**
 
 ```bash
 python main.py -m MSACL -d baby
 ```
 
-**Sports**
+###**Sports**
 
 ```bash
 python main.py -m MSACL -d sports
 ```
 
-**Clothing**
+###**Clothing**
 
 ```bash
 python main.py -m MSACL -d clothing
@@ -72,4 +72,4 @@ python main.py -m MSACL -d clothing
 
 Please make sure that the dataset specified by `-d` corresponds to an existing configuration file in `src/configs/model/`.
 
-Note: the model additionally requires `user_graph_dict.npy` (the user-user graph). If this file is not included in the downloaded data, generate it by running `python dualgnn-gen-u-u-matrix.py -d <dataset>` inside the `preprocessing/` directory.
+
