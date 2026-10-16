@@ -53,7 +53,6 @@ class MSACL(GeneralRecommender):
         self.reg_weight = config['reg_weight']
         self.align_weight = config['align_weight']
         self.layer_agcl_weight = config['layer_agcl_weight']
-        self.mask_weight_f = config['mask_weight_f']
         self.temp = config['temp']
         self.alpha = config['alpha']
         self.drop_rate = 0.1
